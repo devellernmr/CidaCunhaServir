@@ -1,0 +1,875 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@font-face {
+    font-family: Brittany;
+    src: url(BrittanySignature.ttf);
+}
+@font-face {
+    font-family: Metanoia;
+    src: url(Metanoia.ttf);
+}
+
+
+/* Variáveis de CSS para cores e fonte */
+:root {
+    --background-color: #2b2b1f;
+    --text-color: #ffffff;
+    --accent-color: #ffffff;
+    --overlay-bg-color: rgba(0, 0, 0, 0.7);
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Prevenir overflow horizontal */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede que a página se expanda horizontalmente */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+header {
+    position: fixed; /* Fixa o header no topo da página */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vh 25px; /* Reduz o padding para aproximar a borda dos elementos */
+    color: #fff;
+    z-index: 1000; /* Mantém o header acima de outros elementos */
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: Brittany;
+    font-weight: 100;
+}
+
+header nav ul {
+    font-weight: 100;
+    font-size: 1.4vw;
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    font-family: "Questrial", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 6px; /* Mantém o padding constante */
+}
+
+ul li a:hover {
+    color: black; /* Altera a cor do texto ao passar o mouse */
+    background-color: #a9a9a9; /* Adiciona uma cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao fundo */
+    padding: 25px 6px;
+    transition: ease 1s;
+}
+
+/* Menu Hambúrguer */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer .menu-hamburguer-mobile {
+    width: 7vw;
+    height: 0.3vh;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: url('Background_img_green.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    padding: 50px 27px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-text {
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Metanoia;
+    font-size: 6vw;
+    font-weight: 100;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    letter-spacing: 2.5px;
+    margin: 0 auto;
+}
+
+/* Linha span */
+.line-with-diamond {
+    display: flex;
+    align-items: center;
+  }
+  
+.line-with-diamond::before,
+.line-with-diamond::after {
+    content: '';
+    flex: 1;
+    height: 1.8px;
+    background-color: white;
+}
+
+.diamond {
+    border-radius: 15%;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    transform: rotate(45deg); /* Gira o quadrado para parecer um losango */
+    margin: 0 10px; /* Espaço entre as linhas e o losango */
+}  
+
+.hero-text p {
+    display: flex;
+    margin: 0 auto;
+    font-family: "Questrial", sans-serif;
+    font-weight: 100;
+    font-size: 1.4vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    width: 80vw;
+    text-align: justify;
+}
+
+.hero-text button {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2vh 4vw;
+    background-color: transparent;
+    color: #000000;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+.hero-text button:hover{
+     scale: 1.1;
+     transition: ease 1s;
+     background-color: #c0c0c0;
+     color: black ;
+     
+}
+
+.collection-section{
+    height: 90vh;
+}
+
+/* Título da seção */
+.section-title {
+    font-family: Metanoia;
+    font-size: 3em;
+    font-weight: 100;
+    margin-top: 0.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Linha decorativa */
+.decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+    animation: slideIn 1.5s ease-out;
+}
+
+.decorative-line::before,
+.decorative-line::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.decorative-line::before {
+    margin-right: 15px;
+}
+
+.decorative-line::after {
+    margin-left: 15px;
+}
+
+.decorative-icon {
+    border-radius: 15%;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    transform: rotate(45deg); /* Gira o quadrado para parecer um losango */
+    margin: 0 10px; /* Espaço entre as linhas e o losango */
+}
+
+
+/* Subtítulo da seção */
+.section-subtitle {
+    font-family: "Questrial";
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    animation: fadeIn 2s ease-out;
+}
+
+.container{
+    width: 90%;
+    padding: 20px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    width: 250px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1);
+    transition: 1s;
+}
+
+.box img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.box:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+/* Para desfocar todas as outras imagens */
+.container:hover .box:not(:hover) img {
+    filter: blur(1px); /* Aplica desfoque às imagens não destacadas */
+    transition: filter 0.3s ease-in-out; /* Adiciona transição suave */
+}
+
+/* Remova display: none e ajuste o CSS de visibilidade */
+.details_left {
+    position: absolute;
+    top: 50%;
+    left: 24.5vw; /* Mova para fora do contêiner principal */
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Ajuste para visibilidade */
+    color: white; /* Contraste do texto */
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    text-align: left;
+    justify-content: center;
+}
+
+
+.details_right {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Ajuste para visibilidade */
+    color: white; /* Contraste do texto */
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom-right-radius: 0; 
+    border-top-right-radius: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    text-align: left;
+    justify-content: center;
+}
+
+.details_left.details_right h2 {
+    font-size: 1.8em;
+}
+
+.details_left p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.details_left button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details_right button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito hover para mostrar as informações detalhadas */
+.box:hover .details_left,.details_right {
+    opacity: 1;
+}
+
+
+.container-main-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 85vh;
+    width: 100%;
+    background-color: #1e2315;
+}
+
+.container-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    background-color: rgb(244, 244, 245, 0.88);
+}
+
+.box-about{
+    height: 100%;
+    overflow: hidden;
+}
+
+.box-img-about{
+    width: 31vw;
+}
+
+.text-box-about{
+    width: 35vw;
+    margin: 30px;
+    border-right: solid 2px black;
+    padding-right: 30px;
+}
+
+.box-h1-about{
+    font-family: Metanoia;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: left;
+}
+
+.box-p-about{
+    color: #000000;
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+
+                                                    /*contact and footer sections*/
+
+
+.container-footer{
+    background-color: #1e2315;
+    width: 100%;
+    height: 100vh;
+}
+
+.box-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-footer{
+    background-color: aqua;
+    width: 45vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-footer img{
+    height: 100%;
+}
+
+.text-footer{
+    width: 50%;
+    height: 90vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-footer-h1{
+    font-family: Metanoia;
+    font-size: 4em;
+    font-weight: 100;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: white;
+}
+
+.line-footer{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.text-footer-div-btn{
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-evenly; /* Centraliza horizontalmente */
+    margin: 1vw;
+}
+
+.text-footer-btn{  
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 0.6vh 0.6vw; /* Espaçamento interno */
+    border: none; /* Remover a borda padrão do botão */
+    border-radius: 8px;
+    color: white; /* Cor do texto e do ícone */
+    font-size: 1.5em; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mãozinha */
+    background-color: white;
+} 
+
+.btn-icon-footer{  
+    width: 2.7vw; /* Largura da imagem SVG */
+    height: 40px; /* Altura da imagem SVG */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
+
+
+/* Insta hover */
+
+.btn-text-footer-insta{
+    background: linear-gradient(45deg, #fd5, #ff543f, #fc5245, #e64771, #d53e91, #cc39a4, #c837ab); /* Define o gradiente */
+    -webkit-background-clip: text; /* Define o recorte do background para o texto (Chrome, Safari, Opera) */
+    -webkit-text-fill-color: transparent; /* Faz o preenchimento do texto ser transparente */
+    background-clip: text; /* Define o recorte do background para o texto (Firefox) */
+    color: transparent; /* Faz o preenchimento do texto ser transparente */
+}
+
+#text-footer-btn-insta:hover{
+    transform: scale(1.2);
+    transition: 1s;
+    background: linear-gradient(45deg, #fd5, #ff543f, #fc5245, #e64771, #d53e91, #cc39a4, #c837ab);
+    transition: 1s ease; 
+}
+
+.text-footer-btn:hover .btn-text-footer-insta{
+    background: none; /* Remove o gradiente */
+    -webkit-background-clip: unset; /* Remove o recorte de fundo para o texto */
+    -webkit-text-fill-color: white; /* Altera a cor do texto para branco no hover */
+    color: white; /* Altera a cor do texto para branco no hover */
+}
+
+
+
+
+
+/* Face hover */
+
+.btn-text-footer-face{
+    color: #039be5;
+}
+
+#text-footer-btn-face:hover{
+    transform: scale(1.2);
+    transition: 1s ease; 
+    background-color: #039be5;
+    color: white;
+}
+
+.text-footer-btn:hover .btn-text-footer-face{
+    background: none; /* Remove o gradiente */
+    -webkit-background-clip: unset; /* Remove o recorte de fundo para o texto */
+    -webkit-text-fill-color: white; /* Altera a cor do texto para branco no hover */
+    color: white; /* Altera a cor do texto para branco no hover */
+}
+
+
+
+/* Zap hover */
+
+.btn-text-footer-zap{
+    color: #40C351;
+}
+
+#text-footer-btn-zap:hover{
+    transform: scale(1.2);
+    transition: 1s ease; 
+    background-color: #40C351;
+    color: white;
+}
+
+.text-footer-btn:hover .btn-text-footer-zap{
+    background: none; /* Remove o gradiente */
+    -webkit-background-clip: unset; /* Remove o recorte de fundo para o texto */
+    -webkit-text-fill-color: white; /* Altera a cor do texto para branco no hover */
+    color: white; /* Altera a cor do texto para branco no hover */
+}
+
+
+
+
+                                                    /* Contact Form*/
+
+.form-footer{
+    margin: 4vh auto;
+    width: 80%;
+    height: 50vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-footer-group{
+    position: relative;
+}
+
+.form_input{
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    outline: none;
+    border: solid 1px white;
+    background-color: transparent;
+    margin-top: 30px;
+    color: white;
+    font-size: 1em;
+    box-shadow: 8px 8px 6px 3px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao input */
+}
+
+#message{
+    padding: 30px 10px;
+    color: white;
+    font-size: 2em;
+}
+
+.placeholder{
+    margin-top: 28px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 22px;
+    color: white;
+    padding: 0px 5px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form_input:focus + .placeholder,
+.form_input:not(:placeholder-shown) + .placeholder {
+    top: -5px;
+    font-size: 0.9em;
+    background-color: #1e2315;
+}
+
+.form-footer-btn{
+    width: 100%;
+    height: 7vh;
+    margin-top: 2vh;
+    background-color: transparent;
+    font-size: 1.5em;
+    color: white;
+    border: solid 1px white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao input */
+}
+
+.form-footer-btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(255, 255, 255, 0.5);
+    transition: ease 1s;
+}
+
+
+                                                    /*footer Sections*/
+
+
+.footer {
+    background-color: rgba(20, 20, 20, 0.9); /* Cor de fundo escura */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vh; /* Espaçamento interno */
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+}
+
+.footer .copy-p-footer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0vh auto; /* Remove margem padrão do parágrafo */
+}
+
+
+
+                                                    /* Animation and Mediaquery */
+
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+        background-color: rgba(39, 39, 39, 0.5);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 1px 0;
+        transition: opacity 0.3s ease;
+        width: 100%;
+        background-color: #333;
+        padding: 2vh ;
+    }
+
+    .nav-links.open {
+        width: 200px;
+    }
+
+    .nav-links.open li {
+        opacity: 1;
+        transition-delay: 0.3s;
+    }
+
+    header nav ul li a {
+        font-size: 2em;
+        margin: 0 auto;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+    .section-title {
+        font-size: 2.5em;
+    }
+
+    .section-subtitle {
+        font-size: 1em;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .details {
+        width: 90%;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Define 2 colunas iguais */
+        gap: 10px; /* Espaço entre as imagens */
+        margin: 0px auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box{
+        width: 100%;
+        margin: 0px 0px;
+    }
+
+    .collection-section {
+        height: 100vh;
+    }
+
+    .details_right {
+        display: none;
+    }
+    
+    .details_left {
+        display: none;
+    }
+
+    .container-about{
+        background-image: url('WhatsApp\ Image\ 2024-08-29\ at\ 18.51.31.jpeg'); /* Caminho para sua imagem de fundo */
+        background-size: cover; /* A imagem cobre todo o fundo */
+        background-position: center; /* A imagem é centralizada */
+    }
+
+    .box-img-about{
+        display: none;
+    }
+
+    .text-box-about {
+        width: 100vw;
+        background-color: rgba(225, 225, 225, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .img-footer{
+        display: none;
+    }
+
+    .text-footer{
+        width: 100%;
+    }
+
+    .text-footer-h1{
+        font-size: 3em;
+    }
+
+    .text-footer-btn {
+        padding: 0.5vh 2vw;
+        font-size: 4vw;
+        margin: 1.2vw 0;
+    }
+
+    .btn-icon-footer {
+        width: 6.7vw;
+    }
+}
+
+/*Dispositivos móveis*/
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.4em;
+        font-weight: bold;
+        font-family: Brittany;
+        font-weight: 100;
+    }
+
+    .hero-text{
+        background-color: rgba(51, 51, 51, 0.4);
+        border-radius: 15px;
+        padding: 5vh 2vw;
+        margin: 0 auto;
+        height: 45vh;
+    }
+
+    .hero-text h1 {
+        font-size: 10vw;
+        font-weight: 100;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        letter-spacing: 2.5px;
+        margin: 0 auto;
+    }
+
+    .line-with-diamond::before,
+    .line-with-diamond::after {
+        height: 1.6px;
+    }
+
+    .diamond {
+        width: 14px;
+        height: 14px
+    }  
+
+    .hero-text p {
+        font-weight: 100;
+        font-size: 0.9em;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        width: 80vw;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-subtitle {
+        font-size: 0.9em;
+    }
+
+    .decorative-line {
+        margin: 15px 0;
+    }
+
+    .details h2 {
+        font-size: 1.5em;
+    }
+
+    .details p {
+        font-size: 0.9em;
+    }
+
+    .details button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}

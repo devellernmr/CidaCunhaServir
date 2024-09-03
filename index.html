@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cida Cunha Atelier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CidaCunha<span>Atelie</span></div>
+        <nav class="navbar">
+            <ul ul class="nav-links">
+                <li><a href="#secao1" class="nav-link">Home</a></li>
+                <li><a href="#secao2" class="nav-link">Products</a></li>
+                <li><a href="#secao3" class="nav-link">About</a></li>
+                <li><a href="#secao4" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-hamburguer">
+                <span class="menu-hamburguer-mobile"></span>
+                <span class="menu-hamburguer-mobile"></span>
+                <span class="menu-hamburguer-mobile"></span>
+            </div>
+        </nav>
+    </header>
+    <main id="secao1">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>TRANSFORME SUA MESA!!!</h1>
+                <div class="line-with-diamond">
+                    <span class="diamond"></span>
+                  </div>
+                <p>Descubra nossa coleção exclusiva de produtos de mesa posta, feitos com cuidado e paixão. Eleve a experiência das suas refeições com peças únicas que trazem charme e elegância para qualquer ocasião.</p>
+                <button id="btn" onclick="window.open('https://wa.me/5532998833302', '_blank')">Peça Já pelo WhatsApp!</button>
+            </div>
+        </div>
+
+    <section class="collection-section" id="product">
+        <div class="title-container" id="secao2">
+            <h1 class="section-title">Nova Coleção</h1>
+            <div class="decorative-line">
+                <div class="decorative-icon"></div>
+            </div>
+            <p class="section-subtitle">Veja as novas coleções de produtos e torne seus momentos na mesa muito mais especiais</p>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="table-arrangement-with-flowers.jpg">
+                <div class="details_left">
+                    <h2>Produto 2</h2>
+                    <p>Descrição detalhada do produto 2.</p>
+                    <p>Preço: R$ 200,00</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="top-view-table-arrangement-with-flowers.jpg">
+                <div class="details_left">
+                    <h2>Produto 2</h2>
+                    <p>Descrição detalhada do produto 2.</p>
+                    <p>Preço: R$ 200,00</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="assortment-white-table-delicious-meal.jpg">
+                <div class="details_right">
+                    <h2>Produto 2</h2>
+                    <p>Descrição detalhada do produto 2.</p>
+                    <p>Preço: R$ 200,00</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="wedding-table-number-decoration.jpg">
+                <div class="details_right">
+                    <h2>Produto 2</h2>
+                    <p>Descrição detalhada do produto 2.</p>
+                    <p>Preço: R$ 200,00</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-main-about" id="about">
+        <div class="container-about" id="secao3">
+            <div class="box-about">
+                <img src="WhatsApp Image 2024-08-29 at 18.51.31.jpeg" class="box-img-about" alt="">
+            </div>
+            <div class="text-box-about">
+                <h1 class="box-h1-about">
+                    Sobre mim
+                </h1>
+                <p class="box-p-about">
+                    Olá! Eu sou [Seu Nome], e minha paixão por mesas postas vai muito além da decoração — trata-se de criar momentos especiais e transformar cada refeição em uma experiência memorável. <br>
+
+                    Minha jornada começou com o desejo de tornar os encontros à mesa ainda mais significativos, seja em um jantar casual com amigos ou em uma celebração especial. Acredito que uma mesa bem-posta é capaz de transmitir carinho, acolhimento e atenção aos detalhes, e é essa filosofia que me guia em cada peça que produzo e seleciono para você. <br>           
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container-footer" id="secao4">
+        <div class="box-footer">
+            <div class="img-footer">
+                <img class="img-footer-sing" src="dining-table-with-plates.jpg" alt="">
+            </div>
+            <div class="text-footer">
+                <div class="container-text-footer">
+                    <h1 class="text-footer-h1">Entre em contato</h1>
+                    <div class="line-footer"></div>
+                    <div class="text-footer-div-btn">
+                        <button class="text-footer-btn" id="text-footer-btn-insta">
+                            <img src="instagram.svg" alt="Ícone" class="btn-icon-footer">
+                            <span class="btn-text-footer-insta">Instagram</span>
+                        </button>
+                        <button class="text-footer-btn" id="text-footer-btn-face">
+                            <img src="facebook.svg" alt="Ícone" class="btn-icon-footer">
+                            <span class="btn-text-footer-face">Facebook</span>
+                        </button>
+                        <button class="text-footer-btn" id="text-footer-btn-zap">
+                            <img src="whatsapp.svg" alt="Ícone" class="btn-icon-footer">
+                            <span class="btn-text-footer-zap">Whatsapp</span>
+                        </button>
+                    </div>
+                    <div class="line-footer"></div>
+                </div>
+                <div class="form-footer">
+                    <form id="contactForm" action="https://formspree.io/f/mblrwndz" method="POST">
+                        <div class="form-footer-group">
+                            <input type="text" id="name" name="name" placeholder="" class="form_input" required>
+                            <label for="name" class="placeholder">Nome:</label>
+                        </div>
+                        
+                        <div class="form-footer-group">
+                            <input type="email" id="email" name="email" placeholder="" class="form_input" required>
+                            <label for="email" class="placeholder">E-mail:</label>
+                        </div>
+                        
+                        <div class="form-footer-group">
+                            <textarea id="message" name="message" placeholder="" class="form_input" rows="4" required></textarea>
+                            <label for="message" class="placeholder">Mensagem:</label>
+                        </div>
+                        
+                        <button type="submit" class="form-footer-btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="container-footer-copy">
+            <p class="copy-p-footer">&copy; 2024 CidaCunhaServir. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
