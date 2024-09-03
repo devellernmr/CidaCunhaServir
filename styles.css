@@ -680,7 +680,7 @@ ul li a:hover {
 
 
 /* Media queries para responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .nav-links {
         position: fixed;
         right: 0;
