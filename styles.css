@@ -527,7 +527,10 @@ ul li a:hover {
     color: white; /* Altera a cor do texto para branco no hover */
 }
 
-
+#btn-a-zap{
+    text-decoration: none;
+    color: transparent; /* Faz o preenchimento do texto ser transparente */
+}
 
 
 
@@ -551,6 +554,10 @@ ul li a:hover {
     color: white; /* Altera a cor do texto para branco no hover */
 }
 
+#btn-a-face{
+    text-decoration: none;
+    color: #039be5;
+}
 
 
 /* Zap hover */
@@ -573,7 +580,10 @@ ul li a:hover {
     color: white; /* Altera a cor do texto para branco no hover */
 }
 
-
+#btn-a-zap{
+    text-decoration: none;
+    color: #40C351;
+}
 
 
                                                     /* Contact Form*/
