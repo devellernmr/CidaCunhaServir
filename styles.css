@@ -748,6 +748,10 @@ ul li a:hover {
         width: 90%;
     }
 
+    .hero-text p {
+        font-size: 2.8vw;
+    }
+
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Define 2 colunas iguais */
