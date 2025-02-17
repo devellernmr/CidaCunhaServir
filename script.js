@@ -48,3 +48,40 @@ document.addEventListener('click', (event) => {
 });
 
 
+// JavaScript Corrigido
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('click', function(e) {
+        if(window.innerWidth > 1024) return;
+
+        // Bloqueia scroll do body
+        document.body.classList.add('modal-open');
+
+        const modal = document.createElement('div');
+        modal.className = 'box-modal active';
+
+        // Coleta dados dinâmicos
+        const imgSrc = this.querySelector('img').src;
+        const title = this.dataset.title || 'Título Padrão';
+        const desc = this.dataset.description || 'Descrição Padrão';
+
+        modal.innerHTML = `
+            <div class="box-modal-content">
+                <button class="close-btn">&times;</button>
+                <img src="${imgSrc}" alt="${title}">
+                <div class="mobile-details">
+                    <h2>${title}</h2>
+                    <p>${desc}</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        `;
+
+        // Fechar modal
+        modal.querySelector('.close-btn').addEventListener('click', () => {
+            document.body.classList.remove('modal-open');
+            modal.remove();
+        });
+
+        document.body.appendChild(modal);
+    });
+});
