@@ -842,6 +842,34 @@ ul li a:hover {
         justify-content: center;
     }
 
+    .buy-btn {
+        margin: 3vh 0 0 0;
+        width: 45vw;
+        height: 6vh;
+        background-color: #ffffff0c;
+        border: solid 2px #ffffff;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .buy-btn a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 4vw;
+    }
+
+    .buy-btn:hover a{
+        color: #000;
+    }
+
+    .buy-btn:hover {
+        scale: 1.1;
+        transition: 2s;
+        background-color: white;
+        color: #000000;
+        font-size: 4.5vw;
+    }
+
     /* Impede scroll no conteúdo de fundo */
     body.modal-open {
         overflow: hidden;

@@ -71,7 +71,7 @@ document.querySelectorAll('.box').forEach(box => {
                 <div class="mobile-details">
                     <h2>${title}</h2>
                     <p>${desc}</p>
-                    <button class="buy-btn">Comprar</button>
+                    <button class="buy-btn"><a href="#">Adiquira agora!!!</a></button>
                 </div>
             </div>
         `;
